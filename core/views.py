@@ -44,6 +44,10 @@ def login(request, template="login.html"):
     return render(request, template);
 
 
+def periodo(request, template="periodo.html"):
+    return render(request, template);
+
+
 def Consultar(request, template="Consultar.html"):
     return render(request, template);
 

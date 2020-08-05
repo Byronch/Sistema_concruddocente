@@ -28,6 +28,7 @@ urlpatterns = [
     path('Materias/', views.materias, name="materias"),
     path('Cursos/', views.materias, name="cursos"),
     path('login/', views.login, name="login"),
+    path('periodo/', views.periodo, name="periodo"),
     path('Consultar/', views.Consultar, name="Consultar"),
     path('enero/', views.enero, name="enero"),
     path('febrero/', views.febrero, name="febrero"),
