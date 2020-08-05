@@ -1,0 +1,72 @@
+<Ldoctype html>
+    <html lang="es">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <title>LOGIN</title>
+
+        <!-- Estilos y fuentes del template  -->
+        {% load static %}
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+              type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+              rel='stylesheet' type='text/css'>
+        <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+
+    </head>
+
+    <body>
+    <div class="container bg-transparent">
+        <div class="row justify-content-center">
+            <div class="col md-12 col-12">
+                <form action="" class="border rounded bg-light p-4" style="background-image: url('
+                        {% block background %}{% static 'img/portada1-bg.jpg' %}{% endblock %}')">
+                    <h2 class="text-center text-primary">LOGIN</h2>
+
+                    <div class="form-group text-danger">
+                        <label for="nombre">Nombre de usuario</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre"
+                               placeholder="Ingrese su nombre de usuario">
+                    </div>
+
+
+                    <div class="form-group text-danger">
+                        <label for="password bg-transparent">Contraseña</label>
+                        <input type="password" class="form-control" name="password" id="password"
+                               placeholder="Su contraseña debe contener de 6 a 10 caracteres sin espacio">
+
+                    </div>
+
+                    <!-- campo rol -->
+                    <div class="form-group text-left text-danger col-12 col-lg-3">
+                        <label for="rol">Roles:</label>
+                        <div class="input-group">
+                            <select name="rol" id="rol" class="form-control">
+                                <option selected>Seleccione un rol</option>
+                                <option value="docente">Docente</option>
+                                <option value="secretaria">Secretari@</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group text-right" class="border-right-4">
+                        <button type="submit" class="btn btn-primary">Ingrese</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+    <script src="{% static 'js/clean-blog.min.js' %}"></script>
+
+    </body>
+
+    </html>

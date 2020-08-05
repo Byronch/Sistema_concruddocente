@@ -1,0 +1,57 @@
+<Ldoctype html>
+    <html lang="es">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <title>Calendario de asistencias</title>
+
+        <!-- Estilos y fuentes del template  -->
+        {% load static %}
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+              type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+              rel='stylesheet' type='text/css'>
+        <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+    <div class="container bg-transparent">
+        <div class="row justify-content-center">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="{% url "enero" %}">Enero</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "febrero" %}">Febrero</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "marzo" %}">Marzo</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "abril" %}">Abril</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "mayo" %}">Mayo</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "junio" %}">Junio</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "julio" %}">Julio</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "agosto" %}">Agosto</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "septiembre" %}">Septiembre</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "octubre" %}">Octubre</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "noviembre" %}">Noviembre</a></li>
+                    <li class="page-item"><a class="page-link" href="{% url "diciembre" %}">Diciembre</a></li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container">
+                <p align="right"><a href="{% url "asistencia" %}" class="btn btn-primary" role="button">Regresar</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+    <script src="{% static 'js/clean-blog.min.js' %}"></script>
+
+    </body>
+    </html>
