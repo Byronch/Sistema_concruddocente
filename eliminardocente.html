@@ -1,0 +1,13 @@
+{% extends "home.html" %}
+
+{% block background %}{% load static %}{% static 'img/portada1-bg.jpg' %}{% endblock %}
+
+{% block content %}
+    <h2> Eliminar Docente </h2>
+
+    <form method= "POST">
+        {% csrf_token %}
+        {{ formDocente.as_p  }}
+        <button type="submit"> Eliminar Docente </button>
+    </form>
+{% endblock %}

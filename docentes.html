@@ -1,0 +1,13 @@
+{% extends "home.html" %}
+
+{% block background %}{% load static %}{% static 'img/portada1-bg.jpg' %}{% endblock %}
+
+{% block content %}
+
+<h2>DOCENTES</h2>
+
+    <a href="{% url "creardocente" %}">Crear Docente</a>
+    <a href="{% url "modificardocente" %}">Modificar Docente</a>
+    <a href="{% url "eliminardocente" %}">Eliminar Docente</a>
+
+{% endblock %}
