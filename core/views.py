@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from .forms import DocenteForm
+from .models import Docente
 
 # Create your views here
 
@@ -18,11 +21,38 @@ html_base = """
 def home(request, template="home.html"):
     return render(request, template);
 
+
+def docentes(request, template="docentes.html"):
+    docente_list = Docente.objects.all()
+    return render(request, template, {'docentes': docente_list});
+
+
+def creardocente(request, template="creardocente.html"):
+    if request.method == "POST":
+        formDocente = DocenteForm(request.POST or None)
+        if formDocente.is_valid():
+            formDocente.save()
+            return redirect("docentes")
+    else:
+        formDocente = DocenteForm()
+    return render(request, template, {'formDocente': formDocente})
+
+
+def modificardocente(request, template="modificardocente.html"):
+    return render(request, template)
+
+
+def eliminardocente(request, template="eliminardocente.html"):
+    return render(request, template)
+
+
 def asistencia(request, template="asistencias.html"):
     return render(request, template);
 
+
 def notas(request, template="notas.html"):
     return render(request, template);
+
 
 def personal(request, template="personal.html"):
     return render(request, template);
@@ -39,16 +69,14 @@ def materias(request, template="materias.html"):
 def cursos(request, template="cursos.html"):
     return render(request, template);
 
-
 def login(request, template="login.html"):
     return render(request, template);
 
 
-def periodo(request, template="periodo.html"):
+def Consultar(request, template="Consultar.html"):
     return render(request, template);
 
-
-def Consultar(request, template="Consultar.html"):
+def periodo(request, template="periodo.html"):
     return render(request, template);
 
 
